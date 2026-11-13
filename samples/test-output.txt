@@ -1,0 +1,35 @@
+✔ injects the hidden link before </body> in an HTML response (10.006855ms)
+✔ the injected link is invisible and unfocusable: aria-hidden, tabindex=-1, off-screen (0.391222ms)
+✔ injection drops stale content-length / content-encoding and keeps the status (1.720417ms)
+✔ injection is idempotent: a page that already has the link is not changed (0.212137ms)
+✔ a page without </body> gets the link appended (0.295493ms)
+✔ non-HTML upstream response (JSON) passes through untouched (1.078839ms)
+✔ request that does not accept HTML is passed through with no subrequest (0.497359ms)
+✔ asset-looking paths and non-GET requests are passed through (0.531314ms)
+✔ a request carrying the subrequest header is not injected again (no fetch loop) (0.541813ms)
+✔ the subrequest sent to the origin carries the marker header and the client headers (2.900915ms)
+✔ hitting the trap path returns 403 and records IP + user-agent (2.737962ms)
+✔ after a trap hit, later requests from that IP get 403, other IPs are unaffected (2.424304ms)
+✔ a ban expires after banTtlSeconds (1.777024ms)
+✔ MemoryStore expires entries on read and evicts the oldest past maxEntries (0.690812ms)
+✔ trap prefix matching is exact on path segments: /trapdoor is not the trap (2.435133ms)
+✔ configurable trap path: link, trap and robots rule all follow it (2.002334ms)
+✔ allowlisted bot UA (Googlebot, Bingbot) is never banned, even on the trap (0.771493ms)
+✔ verifyBot can reject a spoofed Googlebot UA, which is then treated as an ordinary client (1.100248ms)
+✔ tarpit mode waits tarpitMs before the 403 (5.160661ms)
+✔ log hook receives events and a throwing hook does not break the request (0.791089ms)
+✔ a failing store fails open: the page is served and a store-error event is logged (3.655857ms)
+✔ a failing origin subrequest falls back to pass-through (page still served) (0.792102ms)
+✔ inject:false leaves pages alone but the trap and bans still work (0.649165ms)
+✔ no determinable IP: the trap hit gets a 403 but nothing can be recorded (0.472643ms)
+✔ the subrequest header does not bypass an existing ban (0.645828ms)
+✔ clientIp takes the first x-forwarded-for entry, falls back to x-real-ip, honours ipHeader (0.330158ms)
+✔ kvStore adapter writes JSON with an EX ttl and reads it back (fake Upstash-style client) (1.171892ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 322.854586

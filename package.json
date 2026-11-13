@@ -1,0 +1,13 @@
+{
+  "name": "honeypot-trap",
+  "version": "0.1.0",
+  "description": "One-file Next.js middleware: hidden honeypot link, ban whoever follows it.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "node --import ./test/register.mjs --test --test-reporter=spec test/",
+    "simulate": "node --import ./test/register.mjs samples/simulate.ts"
+  },
+  "engines": { "node": ">=22.18" }
+}

@@ -1,0 +1,8 @@
+2026-11-13T10:00:00.000Z  203.0.113.10    /              -> 200 (link injected)   # human loads home page
+2026-11-13T10:00:00.000Z  203.0.113.10    /api/items     -> 200 (pass-through)   # human fetches JSON
+2026-11-13T10:00:00.000Z  66.249.66.1     /              -> 200 (pass-through)   # Googlebot UA loads home page
+2026-11-13T10:00:00.000Z  198.51.100.23   /trap/archive  -> 403   # crawler follows hidden link
+2026-11-13T10:00:05.000Z  198.51.100.23   /pricing       -> 403   # same crawler, next page
+2026-11-13T10:00:05.000Z  203.0.113.10    /pricing       -> 200 (link injected)   # human on another IP
+2026-11-13T10:05:05.000Z  198.51.100.23   /pricing       -> 403   # crawler, 305 s later (ban 600 s)
+2026-11-13T10:10:06.000Z  198.51.100.23   /pricing       -> 200 (link injected)   # crawler, 606 s later (expired)

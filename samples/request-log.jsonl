@@ -1,0 +1,8 @@
+{"t":"2026-11-13T10:00:00.000Z","label":"human loads home page","ip":"203.0.113.10","ua":"Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0","path":"/","status":200,"passthrough":false,"injected":true}
+{"t":"2026-11-13T10:00:00.000Z","label":"human fetches JSON","ip":"203.0.113.10","ua":"Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0","path":"/api/items","status":200,"passthrough":true,"injected":false}
+{"t":"2026-11-13T10:00:00.000Z","label":"Googlebot UA loads home page","ip":"66.249.66.1","ua":"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)","path":"/","status":200,"passthrough":true,"injected":false}
+{"t":"2026-11-13T10:00:00.000Z","label":"crawler follows hidden link","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/trap/archive","status":403,"passthrough":false,"injected":false}
+{"t":"2026-11-13T10:00:05.000Z","label":"same crawler, next page","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","status":403,"passthrough":false,"injected":false}
+{"t":"2026-11-13T10:00:05.000Z","label":"human on another IP","ip":"203.0.113.10","ua":"Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0","path":"/pricing","status":200,"passthrough":false,"injected":true}
+{"t":"2026-11-13T10:05:05.000Z","label":"crawler, 305 s later (ban 600 s)","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","status":403,"passthrough":false,"injected":false}
+{"t":"2026-11-13T10:10:06.000Z","label":"crawler, 606 s later (expired)","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","status":200,"passthrough":false,"injected":true}

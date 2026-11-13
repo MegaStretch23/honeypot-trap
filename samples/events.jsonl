@@ -1,0 +1,7 @@
+{"type":"injected","ip":"203.0.113.10","ua":"Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0","path":"/","at":1794564000000}
+{"type":"allowlisted","ip":"66.249.66.1","ua":"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)","path":"/","at":1794564000000}
+{"type":"trap-hit","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/trap/archive","at":1794564000000}
+{"type":"banned-block","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","at":1794564005000}
+{"type":"injected","ip":"203.0.113.10","ua":"Mozilla/5.0 (X11; Linux x86_64) Firefox/130.0","path":"/pricing","at":1794564005000}
+{"type":"banned-block","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","at":1794564305000}
+{"type":"injected","ip":"198.51.100.23","ua":"scraper-sim/1.0","path":"/pricing","at":1794564606000}
